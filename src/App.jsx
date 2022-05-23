@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [baseImage, setBaseImage] = useState("");
@@ -23,6 +23,10 @@ function App() {
       };
     });
   };
+
+  useEffect(() => {
+    console.log(baseImage);
+  }, [baseImage]);
 
   return (
     <div className="App">
